@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 5vh;
+    background-color: #1c63bed2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-nav {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon-home {
+    width: 36px;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+}
+
+.my-icon {
+    box-sizing: border-box;
+    width: 64px;
+}
+
+.icon-close {
+    width: 24px;
+    color: red;
+    align-self: flex-end;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border: none;
+    padding: 24px;
+    max-width: 500px;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #d6d6d6;
+    border-radius: 5px;
+    box-shadow: 
+        4px 4px 14px rgba(0, 0, 0, 0.5),
+        -4px -4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.modal[open] {
+    display: flex;
+}
+
+.modal::backdrop {
+    background-color: rgba(70, 70, 70, 0.5);
+}
+
+.modal-input-text {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.modal-input-text:focus {
+    outline: none;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.modal-btn-save {
+    cursor: pointer;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 5px 15px;
+}
+
+.modal-priority-select {
+    min-width: 219px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-priority-select:focus {
+    outline: none;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.modal-description {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.modal-description:focus {
+    outline: none;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.modal-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.modal-checkbox-label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-calendar {
+    min-width: 200px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.modal-calendar:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* projects page */
+
+.projects-container {
+    width: 100%;
+    background-color: peachpuff;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(100px, 200px);
+    gap: 20px;
+    padding: 30px;
+}
+
+.projects-block {
+    border: 3px solid black;
+    max-height: 200px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: 'Roboto';
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+.projects-add-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-ctrl-buttons {
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#projects-btn-add {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+}
+
+.projects-block:hover {
+    box-shadow: 
+        4px 4px 14px rgba(0, 0, 0, 0.5),
+        -4px -4px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* tasks page */
+
+.tasks-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Roboto';
+}
+
+.tasks-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks-col:first-child {
+    background-color: rgb(236, 220, 150);
+}
+
+.tasks-col:nth-child(2) {
+    background-color: rgb(236, 186, 135);
+}
+
+.tasks-col:last-child {
+    background-color: rgb(190, 220, 160);
+}
+
+.tasks-header {
+    padding: 20px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+#tasks-btn-add {
+    width: 80%;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.task-card {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #dfdfdf;
+    box-sizing: border-box;
+}
+
+.task-card-ctrl-buttons-block {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.icon-ctrl-btn {
+    width: 28px;
+}
+
+.task-card-title {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.task-card-description {
+    font-size: 18px;
+}
+
+.task-card p:not(:first-child):not(:last-child) {
+    padding: 5px 0;
+}
+
+.icon-inProgress {
+    color: orange;
+}
+
+.icon-complete {
+    color: green;
+}
+
+.icon-delete {
+    color: red;
+}
